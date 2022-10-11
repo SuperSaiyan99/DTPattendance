@@ -12,23 +12,28 @@
     <nav>
       <div class="container">
         <h1>DTP Attendance Form | Morning</h1>
-      </div>s
+      </div>
     </nav>
 
     <img src="img/dtp_owl.png">
     
     <div class="form">
-    <input type="text" placeholder="School ID" id="schoolID" maxlength = "6" pattern="[0-9]"/>
-      <input type="text" placeholder="First Name" id="firstName" maxlength="6" pattern="[0-9]"/>
-      <input type="text" placeholder="Middle Name" id="middleName" maxlength="6" pattern="[0-9]"/>
-      <input type="text" placeholder="Last Name" id="lastName"  maxlength="6" pattern="[0-9]"/>
+    <input type="text" placeholder="School ID" id="schoolID" maxlength = "6" pattern="[0-9]" required/>
+      <input type="text" placeholder="First Name" id="firstName" maxlength="35" pattern="[a-zA-Z]" required/>
+      <input type="text" placeholder="Middle Name" id="middleName" maxlength="35" pattern="[a-zA-Z]" required/>
+      <input type="text" placeholder="Last Name" id="lastName"  maxlength="35" pattern="[a-zA-Z]" required/>
 
-      <input type="radio" id="first-yr" /> First Year <br>
+      <input type="radio" id="first-yr" checked/> First Year <br>
       <input type="radio" id="second-yr" /> Second Year <br>
       <input type="radio" id="third-yr" /> Third Year <br>
       <input type="radio" id="fourth-yr" /> Fourth Year <br>
+      <input type="radio" id="fourth-yr" /> Fifth Year <br>
 
       <button type="submit">Submit</button>
     </div>
+
+  
+
+
   </body>
 </html>
