@@ -2,7 +2,7 @@
 
     include ('connect.php');
     
-
+    //for insert student Info
     function insertStudentInfo($info_sid, $info_fname, $info_lname, $info_mname, $info_course, $info_yr_lvl,){
         global $conn;
 
@@ -13,7 +13,6 @@
           } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
           }
-
     }
 
     function insertScheduleTimeIn($sched_date, $sched_tin, $info_id){
@@ -26,8 +25,7 @@
         } else {
           echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
-
-  }
+    }
 
   function insertScheduleTimeOut($sched_date, $sched_tin, $info_id){
     global $conn;
@@ -39,8 +37,7 @@
       } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
-
-}
+  }
 
 
 ?>
