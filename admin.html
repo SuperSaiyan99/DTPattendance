@@ -13,54 +13,180 @@
       <div class="container">
         <img src="img/dtp_owl.png">
         <h1 class="dtp">DTP Attendance Form</h1>
+        <input type="button" value="Logout" id="logout">
       </div>
     </nav>
 
-    <h1 class="morning">Morning Schedule</h1>
-    <table>
-      <tr>
-        <!-- Gob, what if mag butang tag time sa checkin sa student below? -->
-        <th>Student ID</th>
-        <th>Student Name</th>
-        <th>Year Level</th>
-        <th>Total</th>
-      </tr>
-      <!-- Gob, maka create kag function na mo auto sya ug create <tr> ug <td> with details na? -->
-      <tr>
-        <td id="studentID">12345</td>
-        <td id="studentName">John Doe</td>
-        <td id="yearLevel">First Year</td>
-        <td id="total">69/70</td>
-      </tr>
-      <tr>
-        <td id="studentID">12345</td>
-        <td id="studentName">John Doe</td>
-        <td id="yearLevel">First Year</td>
-        <td id="total">69/70</td>
-      </tr>
-      <tr>
-        <td id="studentID">12345</td>
-        <td id="studentName">John Doe</td>
-        <td id="yearLevel">First Year</td>
-        <td id="total">69/70</td>
-      </tr>
-    </table>
-
-
-
-
-    <!--
-    <div class="form">
-      <input type="text" placeholder="School ID" id="schoolID" />
-      <input type="text" placeholder="First Name" id="firstName" />
-      <input type="text" placeholder="Middle Name" id="middleName" />
-      <input type="text" placeholder="Last Name" id="lastName" />
-
-      <input type="radio" id="first-yr" /> First Year <br>
-      <input type="radio" id="second-yr" /> Second Year <br>
-      <input type="radio" id="third-yr" /> Third Year <br>
-      <input type="radio" id="fourth-yr" /> Fourth Year <br>
+    <!-- MORNING TIME IN -->
+    <h1 class="morning">Morning Time In MM/DD/YYYY
+      <td>Total</td> <!-- optional rani gob pero basi ka gets ka hehe -->
+      <td>4/5</td>
+    </h1>
+    <div class="morning-table">
+      <table>
+        <tr>
+          <!-- Gob, what if mag butang tag time sa checkin sa student below? -->
+          <th>Student ID</th>
+          <th>Student Name</th>
+          <th>Year Level</th>
+          <th>Ontime</th>
+        </tr>
+        <!-- Gob, maka create kag function na mo auto sya ug create <tr> ug <td> with details na? -->
+        <tr>
+          <td id="studentID">12345</td>
+          <td id="studentName">Spiderman</td>
+          <td id="yearLevel">First Year</td>
+          <td id="ontime">true</td>
+        </tr>
+        <tr>
+          <td id="studentID">53431</td>
+          <td id="studentName">Ironman</td>
+          <td id="yearLevel">Second Year</td>
+          <td id="ontime">false</td>
+        </tr>
+        <tr>
+          <td id="studentID">98765</td>
+          <td id="studentName">Antman</td>
+          <td id="yearLevel">Third Year</td>
+          <td id="ontime">true</td>
+        </tr>
+        <tr>
+          <td id="studentID">34613</td>
+          <td id="studentName">Hulk</td>
+          <td id="yearLevel">Fourth Year</td>
+          <td id="ontime">true</td>
+        </tr>
+      </table>
     </div>
-    -->
+
+    <!-- MORNING TIME OUT -->
+    <h1 class="morning">Morning Time Out MM/DD/YYYY
+      <td>Total</td> <!-- optional rani gob pero basi ka gets ka hehe -->
+      <td>4/5</td>
+    </h1>
+    <div class="morning-table">
+      <table>
+        <tr>
+          <!-- Gob, what if mag butang tag time sa checkin sa student below? -->
+          <th>Student ID</th>
+          <th>Student Name</th>
+          <th>Year Level</th>
+          <th>Ontime</th>
+        </tr>
+        <!-- Gob, maka create kag function na mo auto sya ug create <tr> ug <td> with details na? -->
+        <tr>
+          <td id="studentID">12345</td>
+          <td id="studentName">Spiderman</td>
+          <td id="yearLevel">First Year</td>
+          <td id="ontime">true</td>
+        </tr>
+        <tr>
+          <td id="studentID">53431</td>
+          <td id="studentName">Ironman</td>
+          <td id="yearLevel">Second Year</td>
+          <td id="ontime">false</td>
+        </tr>
+        <tr>
+          <td id="studentID">98765</td>
+          <td id="studentName">Antman</td>
+          <td id="yearLevel">Third Year</td>
+          <td id="ontime">true</td>
+        </tr>
+        <tr>
+          <td id="studentID">34613</td>
+          <td id="studentName">Hulk</td>
+          <td id="yearLevel">Fourth Year</td>
+          <td id="ontime">true</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- AFTERNOON TIME IN -->
+    <h1 class="morning">Afternoon Time In MM/DD/YYYY
+      <td>Total</td> <!-- optional rani gob pero basi ka gets ka hehe -->
+      <td>4/5</td>
+    </h1>
+    <div class="morning-table">
+      <table>
+        <tr>
+          <!-- Gob, what if mag butang tag time sa checkin sa student below? -->
+          <th>Student ID</th>
+          <th>Student Name</th>
+          <th>Year Level</th>
+          <th>Ontime</th>
+        </tr>
+        <!-- Gob, maka create kag function na mo auto sya ug create <tr> ug <td> with details na? -->
+        <tr>
+          <td id="studentID">12345</td>
+          <td id="studentName">Spiderman</td>
+          <td id="yearLevel">First Year</td>
+          <td id="ontime">true</td>
+        </tr>
+        <tr>
+          <td id="studentID">53431</td>
+          <td id="studentName">Ironman</td>
+          <td id="yearLevel">Second Year</td>
+          <td id="ontime">false</td>
+        </tr>
+        <tr>
+          <td id="studentID">98765</td>
+          <td id="studentName">Antman</td>
+          <td id="yearLevel">Third Year</td>
+          <td id="ontime">true</td>
+        </tr>
+        <tr>
+          <td id="studentID">34613</td>
+          <td id="studentName">Hulk</td>
+          <td id="yearLevel">Fourth Year</td>
+          <td id="ontime">true</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- AFTERNOON TIME OUT -->
+    <h1 class="morning">Afternoon Time Out MM/DD/YYYY
+      <td>Total</td> <!-- optional rani gob pero basi ka gets ka hehe -->
+      <td>4/5</td>
+    </h1>
+    <div class="morning-table">
+      <table>
+        <tr>
+          <!-- Gob, what if mag butang tag time sa checkin sa student below? -->
+          <th>Student ID</th>
+          <th>Student Name</th>
+          <th>Year Level</th>
+          <th>Ontime</th>
+        </tr>
+        <!-- Gob, maka create kag function na mo auto sya ug create <tr> ug <td> with details na? -->
+        <tr>
+          <td id="studentID">12345</td>
+          <td id="studentName">Spiderman</td>
+          <td id="yearLevel">First Year</td>
+          <td id="ontime">true</td>
+        </tr>
+        <tr>
+          <td id="studentID">53431</td>
+          <td id="studentName">Ironman</td>
+          <td id="yearLevel">Second Year</td>
+          <td id="ontime">false</td>
+        </tr>
+        <tr>
+          <td id="studentID">98765</td>
+          <td id="studentName">Antman</td>
+          <td id="yearLevel">Third Year</td>
+          <td id="ontime">true</td>
+        </tr>
+        <tr>
+          <td id="studentID">34613</td>
+          <td id="studentName">Hulk</td>
+          <td id="yearLevel">Fourth Year</td>
+          <td id="ontime">true</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
   </body>
 </html>
