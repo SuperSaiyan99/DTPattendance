@@ -9,7 +9,7 @@ try{
   if (isset($_POST['schoolID'])){
 
         echo  $sched_date = date("Y-m-d");
-        echo   $sched_tin = date('h:i:s');
+        echo   $sched_tin = date('h:i:s a');
         echo    $schoolID = $_POST['schoolID'];
         echo     $firstName = $_POST['firstName'];
         echo     $middleName = $_POST['middleName'];
