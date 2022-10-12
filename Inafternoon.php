@@ -63,19 +63,17 @@
 <!------------ FOR DEPARTMENT TYPE------------->
 <div class="form-check">
   <p class="h3">Course</p>
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="1" checked>
+  <input class="form-check-input" type="radio" name="course" id="exampleRadios1" value="IT" checked>
   <label class="form-check-label" for="exampleRadios1">
     Information Technology
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="2" >
+  <input class="form-check-input" type="radio" name="course" id="exampleRadios1" value="CPE" >
   <label class="form-check-label" for="exampleRadios1">
   Computer Engineering
   </label>
 </div>
-
-
       <button type="submit" id="submit" value="post" class="btn btn-primary btn-lg" onclick="foo()">Submit</button>
     </div>
 </form> 
