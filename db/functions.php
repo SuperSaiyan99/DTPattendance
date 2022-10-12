@@ -5,20 +5,8 @@
     //for insert student Info
     function insertStudentInfo($info_sid, $info_fname, $info_lname, $info_mname, $info_course, $info_yr_lvl,){
         global $conn;
-        //insert 
-        $sql = "INSERT INTO `dtp_info`(`info_sid`, `info_fname`, `info_lname`, `info_mname`, `info_course`, `info_yr_lvl`) VALUES ('$info_sid','$info_fname','$info_lname','$info_mname','$info_course','$info_yr_lvl')";
-        //check for duplicate
-        $query = "SELECT * FROM dtp_info WHERE info_sid = $info_sid";
 
-         //check for duplicate
-        if ($result = mysqli_query($conn, $query)) {
-          while($row = mysqli_fetch_array($result)) {
-               if ($row['info_id']){
-                  echo "<script>alert('You are logged in already!')</script>";
-                  header("Location: http://".$_SERVER['HTTP_HOST']."/DTPattendance/existing.php");
-               }
-          }
-        }
+        $sql = "INSERT INTO `dtp_info`(`info_sid`, `info_fname`, `info_lname`, `info_mname`, `info_course`, `info_yr_lvl`) VALUES ('$info_sid','$info_fname','$info_lname','$info_mname','$info_course','$info_yr_lvl')";
 
         if (mysqli_query($conn, $sql)) {
           header("Location: http://".$_SERVER['HTTP_HOST']."/DTPattendance/registered.php");
