@@ -17,8 +17,12 @@
       </div>
     </nav>
 
+<<<<<<< HEAD
     <img src="../img/dtp_owl.png">
 
+=======
+    <img src="img/dtp_owl.png">
+>>>>>>> parent of 6e7d280 (almost done)
     
 <form method="POST" action="../db/addStudentinfoIn.php">
   <div class="form">
@@ -78,6 +82,7 @@
 </form> 
 
 
+
 <script>
   function foo() {
      var IDschool= document.getElementById('IDschool').value;
@@ -90,6 +95,9 @@
      }
  }
 </script>
+
+
+
 
 
   </body>
