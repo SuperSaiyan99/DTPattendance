@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,11 +21,11 @@ session_start();
 
     <img src="img/dtp_owl.png">
     
-<form method="POST" action="db/addStudentinfo.php">
+<form method="POST" action="Inafternoon.php">
   <div class="form">
     <input type="text" placeholder="School ID" id="IDschool" name="schoolID" maxlength = "5"  required/>
       <input type="text" placeholder="First Name" id="IDfirstName" name="firstName" maxlength="35"  required/>
-      <input type="text" placeholder="Middle Name" id="IDmiddleName" name="middleName" maxlength="35"  required/>
+      <input type="text" placeholder="Middle Name" id="IDmiddleName" name="middleName" maxlength="35" />
       <input type="text" placeholder="Last Name" id="IDlastName" name="lastName"  maxlength="35" required/>
   </div>
 
@@ -75,7 +73,7 @@ session_start();
      var IDmiddleName= document.getElementById('IDmiddleName').value;
      var IDlastName= document.getElementById('IDlastName').value;
 
-     if (IDschool === "" || IDfirstName === "" || IDmiddleName === "" || IDlastName === ""){
+     if (IDschool === "" || IDfirstName === "" || IDlastName === ""){
           alert("Please don't leave the boxes empty.");
      }else{
       alert("kaon");
