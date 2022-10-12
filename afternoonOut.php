@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,14 +19,14 @@ session_start();
 
     <img src="img/dtp_owl.png">
     
-<form method="POST" action="db/addStudentinfo.php">
+<form method="POST" action="db/addStudentinfoIn.php">
   <div class="form">
     <input type="text" placeholder="School ID" id="IDschool" name="schoolID" maxlength = "5"  required/>
       <input type="text" placeholder="First Name" id="IDfirstName" name="firstName" maxlength="35"  required/>
-      <input type="text" placeholder="Middle Name" id="IDmiddleName" name="middleName" maxlength="35"  required/>
+      <input type="text" placeholder="Middle Name" id="IDmiddleName" name="middleName" maxlength="35" />
       <input type="text" placeholder="Last Name" id="IDlastName" name="lastName"  maxlength="35" required/>
   </div>
-
+<!------------ YEAR LEVEL------------->
 <div class="form-check">
   <p class="h3">Year Level</p>
   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="1" checked>
@@ -62,6 +58,20 @@ session_start();
     5th Year
   </label>
 </div>
+<!------------ FOR DEPARTMENT TYPE------------->
+<div class="form-check">
+  <p class="h3">Course</p>
+  <input class="form-check-input" type="radio" name="course" id="exampleRadios1" value="IT" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Information Technology
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="course" id="exampleRadios1" value="CPE" >
+  <label class="form-check-label" for="exampleRadios1">
+  Computer Engineering
+  </label>
+</div>
       <button type="submit" id="submit" value="post" class="btn btn-primary btn-lg" onclick="foo()">Submit</button>
     </div>
 </form> 
@@ -77,8 +87,6 @@ session_start();
 
      if (IDschool === "" || IDfirstName === "" || IDlastName === ""){
           alert("Please don't leave the boxes empty.");
-     }else{
-      alert("kaon");
      }
  }
 </script>

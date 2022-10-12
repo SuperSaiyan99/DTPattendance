@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -89,8 +87,6 @@
 
      if (IDschool === "" || IDfirstName === "" || IDlastName === ""){
           alert("Please don't leave the boxes empty.");
-     }else{
-      alert("kaon");
      }
  }
 </script>

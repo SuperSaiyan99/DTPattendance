@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <link href="css/afternoon.css" rel="stylesheet">
+    <link href="css/morning.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="./js/jquery.js"></script>
   </head>
@@ -21,7 +19,7 @@
 
     <img src="img/dtp_owl.png">
     
-<form method="POST" action="Inafternoon.php">
+<form method="POST" action="db/addStudentinfoIn.php">
   <div class="form">
     <input type="text" placeholder="School ID" id="IDschool" name="schoolID" maxlength = "5"  required/>
       <input type="text" placeholder="First Name" id="IDfirstName" name="firstName" maxlength="35"  required/>
@@ -87,7 +85,7 @@
      var IDmiddleName= document.getElementById('IDmiddleName').value;
      var IDlastName= document.getElementById('IDlastName').value;
 
-     if (IDschool === "" || IDfirstName === "" || IDlastName === ""){
+     if (IDschool === "" || IDfirstName === "" || IDlastName === "" || IDschool.length() < 5){
           alert("Please don't leave the boxes empty.");
      }else{
       alert("kaon");

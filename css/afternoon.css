@@ -29,6 +29,7 @@ h1 {
   justify-content: space-between;
 }
 
+
 nav {
   position: fixed;
   top: 0;
@@ -51,12 +52,14 @@ img {
 }
 
 .form {
-  margin: 0 20px 0 40px;
+  margin: 0 20px 0 20px;
 }
 
-.form-check{
-  margin-top: 1rem;
-  margin-left: 2rem;
+.form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.5em;
+  margin-bottom: 0.125rem;
 }
 
 #exampleRadios1{
@@ -66,13 +69,16 @@ img {
 
 form-check{
   margin-top: 1rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 input[type=text] {
   width: 100%;
   padding: 12px;
-  margin: 15px 0 0 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 15px, 0 ,0, 0;
+  margin-bottom: 1rem;
   border: 1px solid #153243;
   border-radius: 4px;
   box-sizing: border-box;
