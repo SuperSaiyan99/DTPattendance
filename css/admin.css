@@ -11,7 +11,7 @@ body {
   background: #EEF0EB;
 }
 
-h1 {
+.dtp {
   color: #EDF6F9;
   font-size: 20px;
   font-weight: 500;
@@ -36,44 +36,51 @@ nav {
   right: 0;
   z-index: 99;
   background-color: #153243;
-  padding: 16px 32px;
   border-bottom: 3px solid #B4B8AB;
   box-shadow: 0 1px 10px rgba(0,0,0,0.60);
 }
 
 img {
-  display: block;
-  margin-top: 80px;
   margin-left: auto;
-  margin-right: auto;
-  max-width: 30%;
+  width: 50px;
   height: auto;
 }
 
-.form {
-  margin: 0 20px 0 20px;
-}
-
-input[type=text] {
-  width: 100%;
-  padding: 12px;
-  margin: 15px 0 0 0;
+#logout {
   border: none;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
+  border-radius: 3px;
+  padding: 5px 8px 5px 8px;
+  cursor: pointer;
 }
 
-input[type=radio] {
-  display: relative;
-  margin: 30px 0 10px 0;
+.morning {
+  text-align: center;
+  font-size: 30px;
+  color: #031927;
+  margin-top: 90px;
 }
 
-input[type=button] {
-  display: block;
-  border: none;
-  border-radius: 8px;
-  background-color: #9DD1F1;
-  margin: 34px auto;
-  padding: 15px 30px 15px 30px;
+.morning-table {
+  height: 190px;
+  overflow-y: scroll;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  background-color: #153243;
+  color: #EDF6F9;
+}
+
+th, td {
+  padding: 15px 50px 15px 50px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #CFCFCF;
 }
