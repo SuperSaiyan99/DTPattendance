@@ -5,9 +5,8 @@
     //for insert student Info
     function insertStudentInfo($info_sid, $info_fname, $info_lname, $info_mname, $info_course, $info_yr_lvl,){
         global $conn;
-
+        //insert 
         $sql = "INSERT INTO `dtp_info`(`info_sid`, `info_fname`, `info_lname`, `info_mname`, `info_course`, `info_yr_lvl`) VALUES ('$info_sid','$info_fname','$info_lname','$info_mname','$info_course','$info_yr_lvl')";
-<<<<<<< HEAD
         //check for duplicate
         $query = "SELECT * FROM dtp_info WHERE info_sid = $info_sid";
 
@@ -17,39 +16,23 @@
                if ($row['info_id']){
                   header("Location: http://".$_SERVER['HTTP_HOST']."/DTPattendance/existing.php");
                }
+               else {
+                header("Location: http://".$_SERVER['HTTP_HOST']."/DTPattendance/ending.html");
+              }
           }
         }
         else {
-=======
-        
-        
-        if (mysqli_query($conn, $sql)) {
-          echo "<script>alert('Succesfully Registered')</script>";
-          }else if ($conn -> errno == 1062){
-            echo "<script>alert('Attendance has been checked!')</script>";
-            header("Location: http://".$_SERVER['HTTP_HOST']."/DTPattendance/");
-          } 
-          else {
->>>>>>> parent of 6e7d280 (almost done)
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
           }
     }
 
-    function insertScheduleTimeIn($sched_date, $sched_tin, $info_sid){
+    function insertScheduleTimeIn($sched_date, $sched_tin, $sched_entry, $info_sid){
       global $conn;
 
-<<<<<<< HEAD
       $sql = "INSERT INTO `dtp_sched`(`sched_date`, `sched_tin`, `sched_entry`, `info_id`) VALUES ('$sched_date','$sched_tin', 'In', '$info_sid')";
-=======
-      $sql = "INSERT INTO `dtp_sched`(`sched_date`, `sched_tin`, `info_sid`) VALUES ('$sched_date','$sched_tin','$info_sid')";
->>>>>>> parent of 6e7d280 (almost done)
       
-      
-      if (mysqli_query($conn, $sql)) {
-          echo "<script>alert('Succesfully Registered')</script>";
-        } else {
-          echo("Errorcode: " . $conn -> errno);
-        }
+        mysqli_query($conn, $sql);
+
     }
 
   function insertScheduleTimeOut($sched_date, $sched_tin, $info_sid){
@@ -57,32 +40,34 @@
 
     $sql = "INSERT INTO `dtp_info`(`sched_date`, `sched_tout`, `info_id`) VALUES ('$sched_date','Out','$info_sid')";
     
-    if (mysqli_query($conn, $sql)) {
-      echo "<script>alert('Succesfully Registered')</script>";
-      } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-      }
+    mysqli_query($conn, $sql);
+  
   }
 
   function foreignkeyFinder($foreignKey){
     global $conn;
 
-    $sql = "SELECT info_sid  from dtp_info WHERE info_sid  = $foreignKey";
+    $sql = "SELECT * from dtp_info WHERE info_sid = $foreignKey";
     
     if ($result = mysqli_query($conn, $sql)) {
         while($row = mysqli_fetch_array($result)) {
-             return $row['info_sid']; 
+             return $row['info_id']; 
         }
-      } else {
+      } 
+      else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
 
   }
 
+  function clean($string) {
+    $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
+ 
+    return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+ }
 
 
 
-<<<<<<< HEAD
   //for searching
 
 //   <?php
@@ -108,11 +93,6 @@
 //  } 
 // } 
 
-=======
-  
-
-  
->>>>>>> parent of 6e7d280 (almost done)
 
 
 ?>
