@@ -8,18 +8,20 @@
         //insert 
         $sql = "INSERT INTO `dtp_info`(`info_sid`, `info_fname`, `info_lname`, `info_mname`, `info_course`, `info_yr_lvl`) VALUES ('$info_sid','$info_fname','$info_lname','$info_mname','$info_course','$info_yr_lvl')";
         //check for duplicate
-        $query = "SELECT * FROM dtp_info WHERE info_sid = $info_sid";
+       // $query = "SELECT * FROM dtp_info WHERE info_sid = $info_sid";
 
          //check for duplicate
-        if ($result = mysqli_query($conn, $query)) {
+        if ($result = mysqli_query($conn, $sql)) {
           while($row = mysqli_fetch_array($result)) {
                if ($row['info_id']){
+                  echo "<script>alert('You are logged in already!')</script>";
                   header("Location: http://".$_SERVER['HTTP_HOST']."/DTPattendance/existing.php");
                }
-               else {
-                header("Location: http://".$_SERVER['HTTP_HOST']."/DTPattendance/ending.html");
-              }
           }
+        }
+
+        if (mysqli_query($conn, $sql)) {
+          header("Location: http://".$_SERVER['HTTP_HOST']."/DTPattendance/registered.php");
         }
         else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
@@ -31,7 +33,13 @@
 
       $sql = "INSERT INTO `dtp_sched`(`sched_date`, `sched_tin`, `sched_entry`, `info_id`) VALUES ('$sched_date','$sched_tin', 'In', '$info_sid')";
       
-        mysqli_query($conn, $sql);
+      if (mysqli_query($conn, $sql)) {
+        echo "New record created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
+      
+      mysqli_close($conn);
 
     }
 
@@ -60,11 +68,7 @@
 
   }
 
-  function clean($string) {
-    $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
- 
-    return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
- }
+
 
 
 
@@ -93,6 +97,9 @@
 //  } 
 // } 
 
+  
+
+  
 
 
 ?>

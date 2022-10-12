@@ -5,10 +5,18 @@ include ('functions.php');
 
 try{
   
+
   if (isset($_POST['schoolID'])){
 
     $sched_date = date("Y-m-d");
-
+     $sched_tin = date('h:i:s a');
+      $schoolID = $_POST['schoolID'];
+       $firstName = $_POST['firstName'];
+       $middleName = $_POST['middleName'];
+      $lastName = $_POST['lastName'];
+      $exampleRadios = $_POST['exampleRadios'];
+      $course = $_POST['course'];
+      
 
     // nag push ko para sa admin kay na bungkag ang css sa server nimo :)
 
