@@ -10,6 +10,6 @@ date_default_timezone_set('Asia/Manila');
       echo  $lastName = $_POST['lastName'];
       echo  $exampleRadios = $_POST['exampleRadios'];
 
-
+  
       
 ?>

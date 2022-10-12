@@ -75,7 +75,7 @@ session_start();
      var IDmiddleName= document.getElementById('IDmiddleName').value;
      var IDlastName= document.getElementById('IDlastName').value;
 
-     if (IDschool === "" || IDfirstName === "" || IDmiddleName === "" || IDlastName === ""){
+     if (IDschool === "" || IDfirstName === "" || IDlastName === ""){
           alert("Please don't leave the boxes empty.");
      }else{
       alert("kaon");
