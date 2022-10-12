@@ -23,46 +23,6 @@
   <div class="form">
     <input type="text" placeholder="School ID" id="IDschool" name="schoolID" maxlength = "5"  required/>
   </div>
-
-  <?php
-   include ('connect.php');
-    global $conn;
-
-    $id = $_POST['schoolID'];
-      $sql = "SELECT * FROM  dtp_info WHERE info_sid= $id"; 
-    $resultprice = mysqli_query($conn, $sql);  
-
-    while($row = mysqli_fetch_array($resultprice)){   
-    ?>
-  <input type="text" id="adFee" name="adfee" contenteditable="false" value="<?php echo $row['info_fname'];?>" />
-    <?php } ?>
-
-  <?php
-    include ('connect.php');
-
-    $search = mysqli_real_escape_string($conn, $idSearch);
-    
-    
-    $result = mysqli_query($conn, $sql);
-
-      if (mysqli_num_rows($result) > 0) {
-
-          while($row = mysqli_fetch_assoc($result)) {
-          
-            $id=$row['user_id'];
-            
-            $name=$row['user_name']; 
-            $pass=$row['user_pass']; 
-            $type=$row['user_type'];
-
-         header("location: forms.php");
-    }
-
-      } else {
-         echo "0 results";
-   }
-    ?>
-
     
       <input type="text" placeholder="Middle Name" id="IDmiddleName" name="middleName" maxlength="35" />
       <input type="text" placeholder="Last Name" id="IDlastName" name="lastName"  maxlength="35" required/>
