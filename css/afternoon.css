@@ -73,7 +73,7 @@ input[type=text] {
   width: 100%;
   padding: 12px;
   margin: 15px 0 0 0;
-  border: none;
+  border: 1px solid #153243;
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
