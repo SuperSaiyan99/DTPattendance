@@ -18,6 +18,7 @@
     </nav>
 
     <img src="img/dtp_owl.png">
+
     
 <form method="POST" action="db/addStudentinfoIn.php">
   <div class="form">
@@ -77,7 +78,6 @@
 </form> 
 
 
-
 <script>
   function foo() {
      var IDschool= document.getElementById('IDschool').value;
@@ -90,9 +90,6 @@
      }
  }
 </script>
-
-
-
 
 
   </body>
