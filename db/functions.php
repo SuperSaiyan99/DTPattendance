@@ -30,7 +30,7 @@
   function insertScheduleTimeOut($sched_date, $sched_tin, $info_id){
     global $conn;
 
-    $sql = "INSERT INTO `dtp_info`(`sched_date`, `sched_tin`, `info_id`) VALUES ('$sched_date','$sched_tin','$info_id')";
+    $sql = "INSERT INTO `dtp_info`(`sched_date`, `sched_tout`, `info_id`) VALUES ('$sched_date','$sched_tin','$info_id')";
     
     if (mysqli_query($conn, $sql)) {
         echo "New record created successfully";
