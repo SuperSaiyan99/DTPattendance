@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <link href="css/afternoon.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="./js/jquery.js"></script>
+    <link href="../css/afternoon.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/jquery.js"></script>
   </head>
   <body>
 
@@ -17,10 +17,10 @@
       </div>
     </nav>
 
-    <img src="img/dtp_owl.png">
+    <img src="../img/dtp_owl.png">
 
     
-<form method="POST" action="db/addStudentinfoIn.php">
+<form method="POST" action="../db/addStudentinfoIn.php">
   <div class="form">
     <input type="text" placeholder="School ID" id="IDschool" name="schoolID" maxlength = "5"  required/>
       <input type="text" placeholder="First Name" id="IDfirstName" name="firstName" maxlength="35"  required/>

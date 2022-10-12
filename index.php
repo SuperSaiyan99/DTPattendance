@@ -1,8 +1,8 @@
 <?php
 
     header('Location: Inmorning.php');
-   // header('Location: morningOut.php');
-   // header('Location: Inafternoon.php');
-   // header('Location: afternoonOut.php');
+   // header('Location: Morning/morningOut.php');
+   // header('Location: Afternoon/Inafternoon.php');
+   // header('Location: Afternoon/afternoonOut.php');
 
 ?>

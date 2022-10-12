@@ -4,10 +4,10 @@
     <title>DTP | Attendance</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <link href="css/morning.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="./js/jquery.js"></script>
+    <link href="css/morning.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
   </head>
   <body>
 
@@ -75,8 +75,6 @@
       <button type="submit" id="submit" value="post" class="btn btn-primary btn-lg" onclick="foo()">Submit</button>
     </div>
 </form> 
-
-
 
 <script>
   function foo() {

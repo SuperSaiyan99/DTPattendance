@@ -14,14 +14,9 @@
         if ($result = mysqli_query($conn, $query)) {
           while($row = mysqli_fetch_array($result)) {
                if ($row['info_id']){
-                  echo "<script>alert('You are logged in already!')</script>";
                   header("Location: http://".$_SERVER['HTTP_HOST']."/DTPattendance/existing.php");
                }
           }
-        }
-
-        if (mysqli_query($conn, $sql)) {
-          header("Location: http://".$_SERVER['HTTP_HOST']."/DTPattendance/registered.php");
         }
         else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
@@ -31,7 +26,7 @@
     function insertScheduleTimeIn($sched_date, $sched_tin, $sched_entry, $info_sid){
       global $conn;
 
-      $sql = "INSERT INTO `dtp_sched`(`sched_date`, `sched_tin`, `sched_entry`, `info_id`) VALUES ('$sched_date','$sched_tin', '$sched_entry', '$info_sid')";
+      $sql = "INSERT INTO `dtp_sched`(`sched_date`, `sched_tin`, `sched_entry`, `info_id`) VALUES ('$sched_date','$sched_tin', 'In', '$info_sid')";
       
         mysqli_query($conn, $sql);
 
@@ -40,7 +35,7 @@
   function insertScheduleTimeOut($sched_date, $sched_tin, $info_sid){
     global $conn;
 
-    $sql = "INSERT INTO `dtp_info`(`sched_date`, `sched_tout`, `info_id`) VALUES ('$sched_date','$sched_tin','$info_sid')";
+    $sql = "INSERT INTO `dtp_info`(`sched_date`, `sched_tout`, `info_id`) VALUES ('$sched_date','Out','$info_sid')";
     
     mysqli_query($conn, $sql);
   
@@ -94,11 +89,7 @@
 //    }
 //  } 
 // } 
-// ?>
 
-  
-
-  
 
 
 ?>
