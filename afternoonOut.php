@@ -17,7 +17,7 @@ session_start();
 
     <nav>
       <div class="container">
-        <h1>DTP Attendance Form | Afternoon</h1>
+        <h1>DTP Attendance Form | Afternoon Out</h1>
       </div>
     </nav>
 
@@ -25,7 +25,7 @@ session_start();
     
 <form method="POST" action="db/addStudentinfo.php">
   <div class="form">
-    <input type="text" placeholder="School ID" id="IDschool" name="schoolID" maxlength = "6"  required/>
+    <input type="text" placeholder="School ID" id="IDschool" name="schoolID" maxlength = "5"  required/>
       <input type="text" placeholder="First Name" id="IDfirstName" name="firstName" maxlength="35"  required/>
       <input type="text" placeholder="Middle Name" id="IDmiddleName" name="middleName" maxlength="35"  required/>
       <input type="text" placeholder="Last Name" id="IDlastName" name="lastName"  maxlength="35" required/>
@@ -62,7 +62,7 @@ session_start();
     5th Year
   </label>
 </div>
-      <button type="submit" id="submit" value="post" class="btn btn-primary btn-lg">Submit</button>
+      <button type="submit" id="submit" value="post" class="btn btn-primary btn-lg" onclick="foo()">Submit</button>
     </div>
 </form> 
 
@@ -70,13 +70,16 @@ session_start();
 
 <script>
   function foo() {
-      $.ajax({
-        url:"db/addStudentinfo.php", //the page containing php script
-        type: "GET", //request type
-        success:function(result){
-          alert(result)
-       }
-     });
+     var IDschool= document.getElementById('IDschool').value;
+     var IDfirstName= document.getElementById('IDfirstName').value;
+     var IDmiddleName= document.getElementById('IDmiddleName').value;
+     var IDlastName= document.getElementById('IDlastName').value;
+
+     if (IDschool === "" || IDfirstName === "" || IDmiddleName === "" || IDlastName === ""){
+          alert("Please don't leave the boxes empty.");
+     }else{
+      alert("kaon");
+     }
  }
 </script>
 
