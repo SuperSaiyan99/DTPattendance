@@ -19,15 +19,62 @@
 
     <img src="img/dtp_owl.png">
     
-<form method="POST" action="/db/addStudentinfoOut.php">
+    <form method="POST" action="db/addStudentinfoOut.php">
   <div class="form">
     <input type="text" placeholder="School ID" id="IDschool" name="schoolID" maxlength = "5"  required/>
+      <input type="text" placeholder="First Name" id="IDfirstName" name="firstName" maxlength="35"  required/>
+      <input type="text" placeholder="Middle Name" id="IDmiddleName" name="middleName" maxlength="35" />
+      <input type="text" placeholder="Last Name" id="IDlastName" name="lastName"  maxlength="35" required/>
   </div>
-  <button type="submit" id="submit" value="post" class="btn btn-primary btn-lg" onclick="foo()">Submit</button>
+<!------------ YEAR LEVEL------------->
+<div class="form-check">
+  <p class="h3">Year Level</p>
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="1" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    1st Year
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="2" >
+  <label class="form-check-label" for="exampleRadios1">
+    2nd Year
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="3" >
+  <label class="form-check-label" for="exampleRadios1">
+    3rd Year
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="4" >
+  <label class="form-check-label" for="exampleRadios1">
+    4th Year
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="5" >
+  <label class="form-check-label" for="exampleRadios1">
+    5th Year
+  </label>
+</div>
+<!------------ FOR DEPARTMENT TYPE------------->
+<div class="form-check">
+  <p class="h3">Course</p>
+  <input class="form-check-input" type="radio" name="course" id="exampleRadios1" value="IT" checked>
+  <label class="form-check-label" for="exampleRadios1">
+    Information Technology
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="course" id="exampleRadios1" value="CPE" >
+  <label class="form-check-label" for="exampleRadios1">
+  Computer Engineering
+  </label>
+</div>
+      <button type="submit" id="submit" value="post" class="btn btn-primary btn-lg" onclick="foo()">Submit</button>
     </div>
 </form> 
-
-
 
 <script>
   function foo() {

@@ -5,18 +5,18 @@ include ('functions.php');
 
 try{
   
+
   if (isset($_POST['schoolID'])){
+
     $sched_date = date("Y-m-d");
      $sched_tin = date('h:i:s a');
-     $schoolID = clean($_POST['schoolID']);
-
-     //clean up
-       $firstName = clean($_POST['firstName']);
-       $middleName = clean($_POST['middleName']);
-      $lastName = clean($_POST['lastName']);
-      $exampleRadios = clean($_POST['exampleRadios']);
-      $course = clean($_POST['course']);
-      
+      $schoolID = $_POST['schoolID'];
+       $firstName = $_POST['firstName'];
+       $middleName = $_POST['middleName'];
+      $lastName = $_POST['lastName'];
+      $exampleRadios = $_POST['exampleRadios'];
+      $course = $_POST['course'];
+      $entry = "Out";
 
     // nag push ko para sa admin kay na bungkag ang css sa server nimo :)
 
@@ -25,10 +25,10 @@ try{
     }
 
     if (date('a') === "pm"){
-      $sched_entry = 'afternoon';
-  }else{
-       $sched_entry = 'morning';
-  }
+      $sched_type ="afternoon";
+    }else{
+      $sched_type ="morning";
+    }
 
     insertStudentInfo(
       $schoolID,
@@ -39,11 +39,12 @@ try{
       $exampleRadios
     );
 
-    insertScheduleTimeOut(
+    insertScheduleTimeIn(
       $sched_date,
       $sched_tin,
-      $sched_entry , 
-      foreignkeyFinder($schoolID)
+      $entry,
+      foreignkeyFinder($schoolID),
+      $sched_type
     );
 }
 }
@@ -53,10 +54,6 @@ catch (mysqli_sql_exception $e) {
 
 }
   
-
-
-     
-
       //query for selecting foreign key
     //SELECT info_id from dtp_info WHERE info_sid = $schoolID
 
