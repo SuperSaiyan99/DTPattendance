@@ -17,7 +17,7 @@
       </div>
     </nav>
 
-    <img src="/img/dtp_owl.png">
+    <img src="img/dtp_owl.png">
 
     
 <form method="POST" action="db/addStudentinfoOut.php">

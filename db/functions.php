@@ -34,7 +34,8 @@
     function insertScheduleTimeOut($sched_date, $sched_tin, $sched_entry, $info_id, $sched_type){
       global $conn;
 
-      $sql = "INSERT INTO `dtp_sched`(`sched_date`, `sched_tin`, `sched_entry`, `info_id`, `sched_type`) VALUES ('$sched_date', $sched_tin', '$sched_entry','$info_id','$sched_type')";
+      $sql = "INSERT INTO `dtp_sched`(`sched_date`, `sched_tin`, `sched_entry`, `info_id`, `sched_type`) VALUES ('$sched_date', '$sched_tin', '$sched_entry','$info_id','$sched_type')";
+     
       if (mysqli_query($conn, $sql)) {
         header("Location: http://".$_SERVER['HTTP_HOST']."/DTPattendance/ending.php");
       } else {

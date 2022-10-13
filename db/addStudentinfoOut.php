@@ -8,15 +8,16 @@ try{
 
   if (isset($_POST['schoolID'])){
 
-    $sched_date = date("Y-m-d");
-     $sched_tin = date('h:i:s a');
-      $schoolID = $_POST['schoolID'];
-       $firstName = $_POST['firstName'];
-       $middleName = $_POST['middleName'];
-      $lastName = $_POST['lastName'];
-      $exampleRadios = $_POST['exampleRadios'];
-      $course = $_POST['course'];
-      $entry = "Out";
+          $sched_date = date("Y-m-d");
+           $sched_tin = date('h:i:s a');
+            $schoolID = $_POST['schoolID'];
+             $firstName = $_POST['firstName'];
+             $middleName = $_POST['middleName'];
+             $lastName = $_POST['lastName'];
+             $exampleRadios = $_POST['exampleRadios'];
+            $course = $_POST['course'];
+                 $entry = "Out";
+      
 
     // nag push ko para sa admin kay na bungkag ang css sa server nimo :)
 
@@ -30,6 +31,9 @@ try{
       $sched_type ="morning";
     }
 
+    // $sched_type ="morning";
+
+
     insertStudentInfo(
       $schoolID,
       $firstName,
@@ -39,7 +43,7 @@ try{
       $exampleRadios
     );
 
-    insertScheduleTimeIn(
+    insertScheduleTimeOut(
       $sched_date,
       $sched_tin,
       $entry,

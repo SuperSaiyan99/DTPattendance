@@ -8,15 +8,15 @@ try{
 
   if (isset($_POST['schoolID'])){
 
-        echo  $sched_date = date("Y-m-d");
-        echo   $sched_tin = date('h:i:s a');
-        echo    $schoolID = $_POST['schoolID'];
-        echo     $firstName = $_POST['firstName'];
-        echo     $middleName = $_POST['middleName'];
-        echo     $lastName = $_POST['lastName'];
-        echo     $exampleRadios = $_POST['exampleRadios'];
-        echo    $course = $_POST['course'];
-            echo     $entry = "In";
+          $sched_date = date("Y-m-d");
+           $sched_tin = date('h:i:s a');
+            $schoolID = $_POST['schoolID'];
+             $firstName = $_POST['firstName'];
+             $middleName = $_POST['middleName'];
+             $lastName = $_POST['lastName'];
+             $exampleRadios = $_POST['exampleRadios'];
+            $course = $_POST['course'];
+                 $entry = "In";
       
 
     // nag push ko para sa admin kay na bungkag ang css sa server nimo :)
@@ -31,13 +31,8 @@ try{
       $sched_type ="morning";
     }
 
-    insertScheduleTimeIn(
-      $sched_date,
-      $sched_tin,
-      $entry,
-      foreignkeyFinder($schoolID),
-      $sched_type
-    );
+    // $sched_type ="morning";
+
 
     insertStudentInfo(
       $schoolID,
@@ -46,6 +41,14 @@ try{
       $middleName,
       $course,
       $exampleRadios
+    );
+
+    insertScheduleTimeIn(
+      $sched_date,
+      $sched_tin,
+      $entry,
+      foreignkeyFinder($schoolID),
+      $sched_type
     );
 }
 }
