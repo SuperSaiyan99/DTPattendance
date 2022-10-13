@@ -37,10 +37,21 @@ p {
 }
 
 .quote {
-  margin: 25px 80px 93px 80px;
+  margin: 25px 80px 20px 80px;
 }
 
 .grid-container {
   display: grid;
-  margin: 90px auto;
+  margin: 30px auto 40px auto;
+}
+
+input[type='button'] {
+  display: grid;
+  margin: auto;
+  padding: 18px 30px 18px 30px;
+  border: none;
+  border-radius: 30px;
+  background-color: #153243;
+  color: #fff;
+  cursor: pointer;
 }
