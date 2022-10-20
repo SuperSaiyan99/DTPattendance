@@ -1,3 +1,8 @@
+<?php
+  include 'db/functions.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,7 +23,15 @@
     </nav>
 
     <!-- MORNING TIME IN -->
-    <h1 class="morning">Morning Time In MM/DD/YYYY
+    <h1 class="morning"> 
+<form action="/action_page.php">
+  <select name="cars" id="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+  </select>
+</form>
       <td>Total</td>
       <td>4/5</td>
     </h1>

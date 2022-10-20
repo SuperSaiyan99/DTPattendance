@@ -16,7 +16,7 @@ try{
              $lastName = $_POST['lastName'];
              $exampleRadios = $_POST['exampleRadios'];
             $course = $_POST['course'];
-                 $entry = "Out";
+                 $entry = "Student's Night In";
       
 
     // nag push ko para sa admin kay na bungkag ang css sa server nimo :)

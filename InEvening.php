@@ -18,9 +18,8 @@
     </nav>
 
     <img src="img/dtp_owl.png">
-
     
-<form method="POST" action="db/addStudentinfoOut.php">
+<form method="POST" action="db/addStudentinfoIn.php">
   <div class="form">
     <input type="text" placeholder="School ID" id="IDschool" name="schoolID" maxlength = "5"  required/>
       <input type="text" placeholder="First Name" id="IDfirstName" name="firstName" maxlength="35"  required/>

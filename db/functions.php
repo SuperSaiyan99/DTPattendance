@@ -63,6 +63,22 @@
   }
 
 
+      function showDate($date){
+        global $conn;
+
+        $sql = "SELECT * FROM `dtp_sched` WHERE `sched_tin` = '$date'";
+        
+        if ($result = mysqli_query($conn, $sql)) {
+            while($row = mysqli_fetch_array($result)) {
+                return $row['sched_tin']; 
+            }
+          } 
+          else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+          }
+  
+      }
+
 
 
 

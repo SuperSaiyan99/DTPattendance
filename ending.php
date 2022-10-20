@@ -19,17 +19,19 @@
       It's the players with the best team that wins!
     </p>
   </div>
+
   <input type="button" value="Back" onclick="back()">
+  
   <script>
+
     function back() {
-      // window.location.assign('Inmorning.php');
+      window.location.assign('Inmorning.php');
       // window.location.assign('morningOut.php');
-      // window.location.assign('Inafternoon.php');
-      // window.location.assign('afternoonOut.php');
+     // window.location.assign('Inafternoon.php');
+    //   window.location.assign('afternoonOut.php');
     }
+
   </script>
-  <!--
-  <script>alert('Successfully Registered!');</script>
-  -->
+
 </body>
 </html>

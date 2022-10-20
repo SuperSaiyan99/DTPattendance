@@ -3,6 +3,8 @@
 date_default_timezone_set('Asia/Manila');
 include ('functions.php');
 
+
+
 try{
   
 
@@ -14,9 +16,9 @@ try{
              $firstName = $_POST['firstName'];
              $middleName = $_POST['middleName'];
              $lastName = $_POST['lastName'];
-             $exampleRadios = $_POST['exampleRadios'];
-            $course = $_POST['course'];
-                 $entry = "In";
+               $exampleRadios = $_POST['exampleRadios'];
+                  $course = $_POST['course'];
+                    $entry = "In";
       
 
     // nag push ko para sa admin kay na bungkag ang css sa server nimo :)
@@ -33,6 +35,7 @@ try{
 
     // $sched_type ="morning";
 
+// $sched_type ="morning";
 
     insertStudentInfo(
       $schoolID,
